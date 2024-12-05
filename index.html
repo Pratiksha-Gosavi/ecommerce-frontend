@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopEase - Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/home/logo.png" alt="ShopEase Logo" class="logo-img" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <form class="d-flex ms-3">
+          <input class="form-control me-2" type="search" id="searchInput" placeholder="Search products..." onkeyup="searchProducts()">
+          <button class="btn btn-outline-success" type="button">🔍</button>
+        </form>
+        <div class="profile-dropdown ms-3">
+          <a href="#" class="btn btn-outline-primary dropdown-toggle" id="profileDropdown" data-bs-toggle="dropdown">Profile</a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></li>
+            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</a></li>
+          </ul>
+        </div>
+        
+      </div>
+    </div>
+  </nav>
+
+  <!-- Banner -->
+  <section class="banner">
+    <div class="banner-image-container">
+      <img src="images/home/banner.jpg" alt="ShopEase - Your one-stop shop for all your needs" class="banner-image">
+      <div class="banner-text">
+        <h1>Welcome to ShopEase</h1>
+        <p>Discover the best deals on fashion, beauty, and more!</p>
+        <a href="products.html" class="btn btn-primary btn-lg">Shop Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Explore Our Products</h2>
+      <div class="row" id="productList">
+        <!-- Product Cards -->
+        <div class="col-md-4 mb-4" data-name="Men's Jacket">
+          <div class="card">
+            <img src="images/home/men1.jpg" class="card-img-top" alt="Men's Jacket - Black winter jacket with fur lining">
+            <div class="card-body">
+              <h5 class="card-title">Men's Jacket</h5>
+              <p class="card-text">Stylish winter wear for every occasion.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4" data-name="Women's Dress">
+          <div class="card">
+            <img src="images/home/women1.jpg" class="card-img-top" alt="Women's red evening dress with elegant design">
+            <div class="card-body">
+              <h5 class="card-title">Women's Dress</h5>
+              <p class="card-text">Elegant attire for any event.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4" data-name="Lipsticks">
+          <div class="card">
+            <img src="images/home/lipstick.jpg" class="card-img-top" alt="Set of colorful lipsticks in various shades">
+            <div class="card-body">
+              <h5 class="card-title">Lipsticks</h5>
+              <p class="card-text">Vibrant shades for every occasion.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4" data-name="Men's Suit">
+          <div class="card">
+            <img src="images/home/men1.jpg" class="card-img-top" alt="Men's black suit with modern cut">
+            <div class="card-body">
+              <h5 class="card-title">Men's Suit</h5>
+              <p class="card-text">Sophisticated suit for a sharp look.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4 mb-4" data-name="Casual T-Shirt">
+          <div class="card">
+            <img src="images/home/tshirt.jpg" class="card-img-top" alt="Casual white t-shirt with graphic print">
+            <div class="card-body">
+              <h5 class="card-title">Casual T-Shirt</h5>
+              <p class="card-text">Comfortable and stylish for everyday wear.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4 mb-4" data-name="Evening Gown">
+          <div class="card">
+            <img src="images/home/evening-gown.jpg" class="card-img-top" alt="Elegant evening gown in deep blue">
+            <div class="card-body">
+              <h5 class="card-title">Evening Gown</h5>
+              <p class="card-text">Perfect for a night of glamour and grace.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4 mb-4" data-name="Summer Dress">
+          <div class="card">
+            <img src="images/home/summer-dress.jpg" class="card-img-top" alt="Light and breezy summer dress with floral patterns">
+            <div class="card-body">
+              <h5 class="card-title">Summer Dress</h5>
+              <p class="card-text">Stay cool and stylish this summer.</p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 OnlineShopping. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Login -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Login</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="loginForm">
+            <div class="mb-3">
+              <label for="loginEmail" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="loginEmail" required>
+            </div>
+            <div class="mb-3">
+              <label for="loginPassword" class="form-label">Password</label>
+              <input type="password" class="form-control" id="loginPassword" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sign Up -->
+  <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="signupModalLabel">Sign Up</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="signupForm">
+            <div class="mb-3">
+              <label for="signupEmail" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="signupEmail" required>
+            </div>
+            <div class="mb-3">
+              <label for="signupPassword" class="form-label">Password</label>
+              <input type="password" class="form-control" id="signupPassword" required>
+            </div>
+            <div class="mb-3">
+              <label for="confirmPassword" class="form-label">Confirm Password</label>
+              <input type="password" class="form-control" id="confirmPassword" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
